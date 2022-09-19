@@ -112,7 +112,7 @@ function Add_toll() {
       setIsOpen(false);
 
       console.log(data);
-    fetch('http://localhost:3000/data/', {
+    fetch('https://my-json-server.typicode.com/SaichaitanyareddyG/jsonapi/data', {
  method: "POST",
  headers: {
  "Content-Type": "application/json",

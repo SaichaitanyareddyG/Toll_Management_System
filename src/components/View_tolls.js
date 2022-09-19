@@ -20,7 +20,7 @@ import { useNavigate, useLocation} from "react-router-dom";
 
     const handleRowSelection = (event, cellValues) => {
       console.log('sai',cellValues.row.id)
-      fetch('http://localhost:3000/data/'+cellValues.row.id, { method: 'DELETE' })
+      fetch('https://my-json-server.typicode.com/SaichaitanyareddyG/jsonapi/data'+cellValues.row.id, { method: 'DELETE' })
       .then(() => console.log('successfully'+cellValues.row.id))
       window.location.reload(false);    };
       const columns = [
