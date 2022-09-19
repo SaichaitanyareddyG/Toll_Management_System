@@ -1,0 +1,60 @@
+{
+  "data": [],
+  "entries": [
+    {
+      "id": 1,
+      "TollName": "kadapa",
+      "vehicleNumber": "AP04S5555",
+      "vehicleType": "LCV",
+      "dateTime": "09/18/2022, 24:14:07",
+      "tariff": "546"
+    },
+    {
+      "id": 2,
+      "TollName": "kurnool",
+      "vehicleNumber": "AP04S5555",
+      "vehicleType": "Car/Jeep/Van",
+      "dateTime": "09/18/2022, 24:19:14",
+      "tariff": "784"
+    },
+    {
+      "id": 3,
+      "TollName": "kadapa",
+      "vehicleNumber": "AP04S5789",
+      "vehicleType": "Car/Jeep/Van",
+      "dateTime": "09/18/2022, 22:21:36",
+      "tariff": [
+        "55"
+      ]
+    },
+    {
+      "id": 4,
+      "TollName": "kadapa",
+      "vehicleNumber": "AP04123456",
+      "vehicleType": "Car/Jeep/Van",
+      "dateTime": "09/19/2022, 10:01:30",
+      "tariff": "55"
+    },
+    {
+      "id": 5,
+      "TollName": "",
+      "vehicleNumber": "",
+      "vehicleType": "",
+      "dateTime": "09/19/2022, 12:17:16"
+    },
+    {
+      "id": 6,
+      "TollName": "",
+      "vehicleNumber": "",
+      "vehicleType": "",
+      "dateTime": "09/19/2022, 12:20:03"
+    },
+    {
+      "id": 7,
+      "TollName": "",
+      "vehicleNumber": "",
+      "vehicleType": "",
+      "dateTime": "09/19/2022, 12:21:40"
+    }
+  ]
+}

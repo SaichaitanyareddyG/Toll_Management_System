@@ -1,0 +1,11 @@
+{
+  "data": 
+    [{
+      "Toll Name": "kadapa",
+      "data": [{
+        "vehicleType": "car",
+        "singleJourney": 60,
+        "returnJourney": 30
+      }]
+    }]
+}

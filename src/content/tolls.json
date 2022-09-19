@@ -1,0 +1,20 @@
+[
+
+     {
+            "id":1,
+            "vehicleType":"Car/Jeep/Van"
+        },
+        {
+            "id":2,
+            "vehicleType":"LCV"
+        },
+        {
+            "id":3,
+            "vehicleType":"Truck/Bus"
+        },
+        {
+            "id":4,
+            "vehicleType":"Heavy vehicle"
+        }
+
+]
