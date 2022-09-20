@@ -32,7 +32,7 @@ function Add_toll() {
       }
   )
   useEffect(() => {
-    fetch("http://localhost:3000/data")
+    fetch("http://localhost:8000/data")
       .then((data) => data.json())
       .then((data) => setTableData(data))
       openModal()
@@ -112,7 +112,7 @@ function Add_toll() {
       setIsOpen(false);
 
       console.log(data);
-    fetch('https://my-json-server.typicode.com/SaichaitanyareddyG/jsonapi/data', {
+    fetch('http://localhost:8000/data', {
  method: "POST",
  headers: {
  "Content-Type": "application/json",

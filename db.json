@@ -1,5 +1,96 @@
 {
-  "data": [],
+  "data": [
+    {
+      "id": 2,
+      "TollName": "chengalpattu",
+      "data": [
+        {
+          "id": 1,
+          "vehicleType": "Car/Jeep/Van",
+          "singleJourney": "60",
+          "returnJourney": "30"
+        },
+        {
+          "id": 2,
+          "vehicleType": "LCV",
+          "singleJourney": "95",
+          "returnJourney": "50"
+        },
+        {
+          "id": 3,
+          "vehicleType": "Truck/Bus",
+          "singleJourney": "205",
+          "returnJourney": "100"
+        },
+        {
+          "id": 4,
+          "vehicleType": "Heavy vehicle",
+          "singleJourney": "320",
+          "returnJourney": "158"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "TollName": "Kappalur",
+      "data": [
+        {
+          "id": 1,
+          "vehicleType": "Car/Jeep/Van",
+          "singleJourney": "75",
+          "returnJourney": "50"
+        },
+        {
+          "id": 2,
+          "vehicleType": "LCV",
+          "singleJourney": "125",
+          "returnJourney": "80"
+        },
+        {
+          "id": 3,
+          "vehicleType": "Truck/Bus",
+          "singleJourney": "260",
+          "returnJourney": "120"
+        },
+        {
+          "id": 4,
+          "vehicleType": "Heavy vehicle",
+          "singleJourney": "400",
+          "returnJourney": "200"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "TollName": "Krishnagiri",
+      "data": [
+        {
+          "id": 1,
+          "vehicleType": "Car/Jeep/Van",
+          "singleJourney": "70",
+          "returnJourney": "40"
+        },
+        {
+          "id": 2,
+          "vehicleType": "LCV",
+          "singleJourney": "110",
+          "returnJourney": "65"
+        },
+        {
+          "id": 3,
+          "vehicleType": "Truck/Bus",
+          "singleJourney": "235",
+          "returnJourney": "130"
+        },
+        {
+          "id": 4,
+          "vehicleType": "Heavy vehicle",
+          "singleJourney": "365",
+          "returnJourney": "198"
+        }
+      ]
+    }
+  ],
   "entries": [
     {
       "id": 1,
@@ -23,9 +114,7 @@
       "vehicleNumber": "AP04S5789",
       "vehicleType": "Car/Jeep/Van",
       "dateTime": "09/18/2022, 22:21:36",
-      "tariff": [
-        "55"
-      ]
+      "tariff": "55"
     },
     {
       "id": 4,
@@ -34,27 +123,6 @@
       "vehicleType": "Car/Jeep/Van",
       "dateTime": "09/19/2022, 10:01:30",
       "tariff": "55"
-    },
-    {
-      "id": 5,
-      "TollName": "",
-      "vehicleNumber": "",
-      "vehicleType": "",
-      "dateTime": "09/19/2022, 12:17:16"
-    },
-    {
-      "id": 6,
-      "TollName": "",
-      "vehicleNumber": "",
-      "vehicleType": "",
-      "dateTime": "09/19/2022, 12:20:03"
-    },
-    {
-      "id": 7,
-      "TollName": "",
-      "vehicleNumber": "",
-      "vehicleType": "",
-      "dateTime": "09/19/2022, 12:21:40"
     }
   ]
 }

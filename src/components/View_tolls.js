@@ -1,52 +1,50 @@
 import Button from '@material-ui/core/Button';
 import React, { useState, useEffect } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
-import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 
 import { useNavigate, useLocation} from "react-router-dom";
 
-
+const handleRowSelection = (event, cellValues) => {
+  console.log('sai',cellValues.row.id)
+  fetch('http://localhost:8000/data/'+cellValues.row.id, { method: 'DELETE' })
+  .then(() => console.log('successfully'+cellValues.row.id))
+  window.location.reload();    };
+  const columns = [
+    { field: 'TollName', headerName: 'TOLL NAME', width: 200 },
+    { field: 'Car/Jeep/Van', headerName: 'CAR/JEEP/VAN', width: 200 },
+    { field: 'LCV', headerName: 'LCV', width: 200 },
+    { field: 'Truck/Bus', headerName: 'TRUCK/BUS', width: 260 },
+    { field: 'Heavy vehicle', headerName: 'HEAVY VEHICLE', width: 200 },
+    {
+      field: "Delete",
+      renderCell: (cellValues) => {
+        return (
+          <Button
+            variant="contained"
+            style={{backgroundColor:'#E52F2F' ,color:'white'}}
+            onClick={(event) => {
+              handleRowSelection(event, cellValues);
+            }}
+          >
+            Delete
+          </Button>
+        );
+      }
+    }
+  
+  ]
   const View_tolls = () => { 
     const [a, setTableData] = useState([])
     const [deletedRows, setDeletedRows] = useState([]);
-    const navigate = useNavigate();
     useEffect(() => {
-      fetch("http://localhost:3000/data")
+      fetch("http://localhost:8000/data")
         .then((data) => data.json())
         .then((data) => setTableData(data))
   
     }, [])
  
-
-    const handleRowSelection = (event, cellValues) => {
-      console.log('sai',cellValues.row.id)
-      fetch('https://my-json-server.typicode.com/SaichaitanyareddyG/jsonapi/data'+cellValues.row.id, { method: 'DELETE' })
-      .then(() => console.log('successfully'+cellValues.row.id))
-      window.location.reload(false);    };
-      const columns = [
-        { field: 'TollName', headerName: 'TOLL NAME', width: 200 },
-        { field: 'Car/Jeep/Van', headerName: 'CAR/JEEP/VAN', width: 200 },
-        { field: 'LCV', headerName: 'LCV', width: 200 },
-        { field: 'Truck/Bus', headerName: 'TRUCK/BUS', width: 260 },
-        { field: 'Heavy vehicle', headerName: 'HEAVY VEHICLE', width: 200 },
-        {
-          field: "Delete",
-          renderCell: (cellValues) => {
-            return (
-              <Button
-                variant="contained"
-                style={{backgroundColor:'#E52F2F' ,color:'white'}}
-                onClick={(event) => {
-                  handleRowSelection(event, cellValues);
-                }}
-              >
-                Delete
-              </Button>
-            );
-          }
-        }
-      
-      ]
+console.log(a)
+    
 
 
 

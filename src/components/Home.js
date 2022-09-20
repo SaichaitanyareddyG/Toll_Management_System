@@ -17,7 +17,7 @@ const Home = (props) => {
   const [tableData, setTableData] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3000/entries")
+    fetch("http://localhost:8000/entries")
       .then((data) => data.json())
       .then((data) => setTableData(data))
 

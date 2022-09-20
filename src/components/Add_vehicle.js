@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import Toll from '/Zoho/toll_management/src/content/tolls.json'
-import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
   Routes,
@@ -31,7 +30,7 @@ function Add_vehicle() {
 
   const navigate = new useNavigate()
   useEffect(() => {
-    fetch("http://localhost:3000/data")
+    fetch("http://localhost:8000/data")
       .then((data) => data.json())
       .then((data) => setTableData(data))
       openModal()
@@ -141,7 +140,7 @@ console.log(d);
       setIsOpen(false);
     }
     useEffect(() => {
-      fetch("http://localhost:3000/entries")
+      fetch("http://localhost:8000/entries")
         .then((data) => data.json())
         .then((data) => setTableData3(data))
   
@@ -176,7 +175,7 @@ console.log(d);
       setIsOpen(false);
       console.log(data);
       console.log(b);
-    fetch('http://localhost:3000/entries/', {
+    fetch('http://localhost:8000/entries/', {
  method: "POST",
  headers: {
  "Content-Type": "application/json",
