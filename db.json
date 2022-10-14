@@ -2,36 +2,6 @@
   "data": [
     {
       "id": 2,
-      "TollName": "chengalpattu",
-      "data": [
-        {
-          "id": 1,
-          "vehicleType": "Car/Jeep/Van",
-          "singleJourney": "60",
-          "returnJourney": "30"
-        },
-        {
-          "id": 2,
-          "vehicleType": "LCV",
-          "singleJourney": "95",
-          "returnJourney": "50"
-        },
-        {
-          "id": 3,
-          "vehicleType": "Truck/Bus",
-          "singleJourney": "205",
-          "returnJourney": "100"
-        },
-        {
-          "id": 4,
-          "vehicleType": "Heavy vehicle",
-          "singleJourney": "320",
-          "returnJourney": "158"
-        }
-      ]
-    },
-    {
-      "id": 3,
       "TollName": "Kappalur",
       "data": [
         {
@@ -61,32 +31,32 @@
       ]
     },
     {
-      "id": 4,
-      "TollName": "Krishnagiri",
+      "id": 6,
+      "TollName": "hyderabda",
       "data": [
         {
           "id": 1,
           "vehicleType": "Car/Jeep/Van",
-          "singleJourney": "70",
-          "returnJourney": "40"
+          "singleJourney": "45",
+          "returnJourney": "25"
         },
         {
           "id": 2,
           "vehicleType": "LCV",
-          "singleJourney": "110",
-          "returnJourney": "65"
+          "singleJourney": "60",
+          "returnJourney": "30"
         },
         {
           "id": 3,
           "vehicleType": "Truck/Bus",
-          "singleJourney": "235",
-          "returnJourney": "130"
+          "singleJourney": "70",
+          "returnJourney": "35"
         },
         {
           "id": 4,
           "vehicleType": "Heavy vehicle",
-          "singleJourney": "365",
-          "returnJourney": "198"
+          "singleJourney": "90",
+          "returnJourney": "45"
         }
       ]
     }
@@ -123,6 +93,22 @@
       "vehicleType": "Car/Jeep/Van",
       "dateTime": "09/19/2022, 10:01:30",
       "tariff": "55"
+    },
+    {
+      "id": 5,
+      "TollName": "bangalore",
+      "vehicleNumber": "AP04123456",
+      "vehicleType": "Car/Jeep/Van",
+      "dateTime": "09/20/2022, 13:22:20",
+      "tariff": "45"
+    },
+    {
+      "id": 6,
+      "TollName": "hyderabda",
+      "vehicleNumber": "AP04QA1234",
+      "vehicleType": "Car/Jeep/Van",
+      "dateTime": "10/14/2022, 10:54:16",
+      "tariff": "45"
     }
   ]
 }

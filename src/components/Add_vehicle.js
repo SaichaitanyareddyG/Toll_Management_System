@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
-import Toll from '/Zoho/toll_management/src/content/tolls.json'
+import Toll from './tolls.json'
 import {
   BrowserRouter as Router,
   Routes,
@@ -148,16 +148,16 @@ console.log(d);
 
     const style = {
       content: {
-        border: '1px solid black',
-        borderRadius: '4px',
+        border: '2px solid black',
+        borderRadius: '20px',
         bottom: '5%',
-        height: '60%',  // set height
-        left: '30%',
+        height: '70%',  // set height
+        left: '35%',
         padding: '2rem',
         position: 'fixed',
         right: 'auto',
         top: '20%', // start from center
-        width: '30%',
+        width: '25%',
         maxWidth: '40rem'
       }
     };
@@ -193,12 +193,16 @@ console.log(d);
     <div>
       <Modal style={style}
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
       
         contentLabel="Example Modal"
       >
-      <div style={{textAlign:'right',top:0}} >
-        <Link to="/" className='btn btn-danger' onClick={closeModal}>X</Link></div>
+      <div  style={{textAlign:'right'}}>
+      
+        <Link to="/" className='btn btn-danger'  onClick={closeModal}>X</Link>
+        </div>
+        <h4 style={{textAlign:'center' ,top:'50%'}}> Add new entry</h4>
+<br />
+       
         <form onSubmit={handleSubmit} style={{textAlign:'center'}}>
           <label>Select Toll Name<span style={{color:'red'}}>*</span></label>
             <br />
@@ -208,6 +212,7 @@ console.log(d);
                 onChange={handleChange}
                 name="TollName"
                 required
+                style={{width:'100%'}}
             >
                 <option value="Select Toll">Select Toll Name</option>
                 {
@@ -225,6 +230,8 @@ console.log(d);
                 onChange={handleChange}
                 name="vehicleType"
                 required
+            
+                style={{width:'100%'}}
             >
                 <option value="Select Vehicle Type">Select Vehicle Type</option>
                 {
@@ -242,6 +249,8 @@ console.log(d);
                 name="vehicleNumber"
                 required
                 value={formData.vehicleNumber}
+            
+                style={{width:'100%'}}
             />
             <br /><br/>
                         <label>Tariff<span style={{color:'red'}}>*</span></label>
@@ -254,6 +263,7 @@ console.log(d);
                 value={triff[0]}
                 required="required"
                 disabled
+                style={{width:'100%'}}
             />
       
             <br /><br/>

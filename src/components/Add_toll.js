@@ -1,8 +1,8 @@
 import { error } from 'console';
 import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
-import Toll from '/Zoho/toll_management/src/content/tolls.json'
-import Button from '@material-ui/core/Button';
+import Toll from './tolls.json'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -38,8 +38,7 @@ function Add_toll() {
       openModal()
 
   }, [])
-
-  function handleChange(event) {
+    function handleChange(event) {
       const {name, value, type, checked} = event.target
       setFormData(prevFormData => {
           return {
@@ -63,8 +62,14 @@ function Add_toll() {
     function closeModal() {
       setIsOpen(false);
     }
-    const data={
-      "id":a.length+1,
+    console.log('sai',a)
+    var data={}
+    if(a.length>0){
+    let n=a.length-1;
+    console.log(a[n].id)
+    
+     data={
+      "id":a[n].id+1,
       "TollName": formData.TollName,
       "data": [{
         "id":1,
@@ -91,26 +96,31 @@ function Add_toll() {
         "returnJourney": formData.returnJourney3
       },
     ]
+  }
     }
-  
     const style = {
       content: {
         border: '1px solid black',
-        borderRadius: '4px',
-        bottom: '25%',
+        borderRadius: '5px',
+        bottom: '15%',
         height: '70%',  // set height
         left: '30%',
         padding: '2rem',
         position: 'fixed',
         right: 'auto',
         top: '20%', // start from center
-        width: '60%',
-        maxWidth: '40rem'
+        width: '70%',
+        maxWidth: '40rem',
       }
     };
     function getData(){
       setIsOpen(false);
-
+      var tolls=[]
+      a.map((item,i)=>(
+       tolls[i]=item.TollName
+      ))
+      console.log(tolls,data.TollName,tolls.includes(data.TollName))
+      if(!tolls.includes(data.TollName)){
       console.log(data);
     fetch('http://localhost:8000/data', {
  method: "POST",
@@ -122,21 +132,26 @@ function Add_toll() {
  .then(response => response.json())
  .catch(error => console.error('Error:', error))
  .then(response => console.log('Success:', JSON.stringify(response)));
- alert("Successfully created Toll");
+
     }
+    else{
+      alert(" Toll is already available");
+    }
+  }
+  
   return (
+    
     <div className='container'>
       <Modal style={style}
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
       
         contentLabel="Example Modal"
       >
        <div style={{textAlign:'right',top:0}} >
         <Link to="/View_tolls" className='btn btn-danger' onClick={closeModal}>X</Link></div>
-        <div>I am a modal</div>
+                <h4 style={{textAlign:'center'}}>Add new toll</h4><br/>
         <form onSubmit={handleSubmit}>
-          <label>Toll Name</label>
+          <label>Toll Name<span style={{color:'red'}}>*</span></label>
             <br />
             <input
                 type="text"
@@ -144,8 +159,11 @@ function Add_toll() {
                 onChange={handleChange}
                 name="TollName"
                 value={formData.TollName}
+                style={{width: '100%'}}
             />
             <br/><br/>
+            <label>Vehicle fare details<span style={{color:'red'}}>*</span></label><br />
+
             <select 
                 id="vehicleType" 
                 value={formData.vehicleType}
@@ -264,7 +282,7 @@ function Add_toll() {
             <br />
             <br />
             
-            <Link to="/View_tolls" className="btn btn-primary" onClick={getData}>Submit</Link>
+            <Link to="/View_tolls" className='btn btn-primary' style={{width:'100%',textAlign:'center'}} onClick={getData}>Submit</Link>
         </form>
         
 

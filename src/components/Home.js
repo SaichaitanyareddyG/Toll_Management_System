@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
 import { useNavigate, useLocation} from "react-router-dom";
+import { style } from '@mui/system';
 const columns = [
-  { field: 'id', headerName: 'ID' },
-  { field: 'TollName', headerName: 'TOLL NAME', width: 200 },
   { field: 'vehicleType', headerName: 'VEHICLE TYPE', width: 300 },
   { field: 'vehicleNumber', headerName: 'VEHICLE NUMBER', width: 300 },
   { field: 'dateTime', headerName: 'DATE/TIME', width: 300 },
+  { field: 'TollName', headerName: 'TOLL NAME', width: 200 },
+
   { field: 'tariff', headerName: 'TARIFF' },
 
 ]
@@ -41,12 +42,19 @@ const Home = (props) => {
 
 
   return (
-    <div style={{ height: 300, width: '100%' }}>
+    <div style={{ height: 400, width: '100%'}}>
       <br/><br/>
       {
       (toll!=(null )) ?
       <DataGrid
-      
+      sx={{
+        boxShadow: 2,
+        border: 2,
+        borderColor: 'primary.light',
+        '& .MuiDataGrid-cell:hover': {
+          color: 'primary.main',
+        },
+      }}
         rows={dat}
         columns={columns}
         pageSize={5}

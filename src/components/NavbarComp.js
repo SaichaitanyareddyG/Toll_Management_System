@@ -23,7 +23,7 @@ import {
     const [a, setTableData] = useState([])
     const[title,setTitle]=useState('Toll entries/vehicle entries')
     useEffect(() => {
-      fetch("http://localhost:3000/data")
+      fetch("http://localhost:8000/data")
         .then((data) => data.json())
         .then((data) => setTableData(data))
   

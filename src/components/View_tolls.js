@@ -8,7 +8,8 @@ const handleRowSelection = (event, cellValues) => {
   console.log('sai',cellValues.row.id)
   fetch('http://localhost:8000/data/'+cellValues.row.id, { method: 'DELETE' })
   .then(() => console.log('successfully'+cellValues.row.id))
-  window.location.reload();    };
+  window.location.reload()
+    };
   const columns = [
     { field: 'TollName', headerName: 'TOLL NAME', width: 200 },
     { field: 'Car/Jeep/Van', headerName: 'CAR/JEEP/VAN', width: 200 },
