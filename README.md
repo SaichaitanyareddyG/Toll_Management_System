@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 #### Running Applicaion
-1.npm install
-2.Split terminal
-3.json-server –watch db.json // in secondary terminal
-4. npm start // in main termial
+npm install
+Split terminal
+json-server –watch db.json // in secondary terminal
+npm start // in main termial
