@@ -1,38 +1,8 @@
 {
   "data": [
     {
-      "id": 2,
-      "TollName": "Kappalur",
-      "data": [
-        {
-          "id": 1,
-          "vehicleType": "Car/Jeep/Van",
-          "singleJourney": "75",
-          "returnJourney": "50"
-        },
-        {
-          "id": 2,
-          "vehicleType": "LCV",
-          "singleJourney": "125",
-          "returnJourney": "80"
-        },
-        {
-          "id": 3,
-          "vehicleType": "Truck/Bus",
-          "singleJourney": "260",
-          "returnJourney": "120"
-        },
-        {
-          "id": 4,
-          "vehicleType": "Heavy vehicle",
-          "singleJourney": "400",
-          "returnJourney": "200"
-        }
-      ]
-    },
-    {
       "id": 6,
-      "TollName": "hyderabda",
+      "TollName": "hyderabad",
       "data": [
         {
           "id": 1,
@@ -59,12 +29,42 @@
           "returnJourney": "45"
         }
       ]
+    },
+    {
+      "id": 7,
+      "TollName": "kadapa",
+      "data": [
+        {
+          "id": 1,
+          "vehicleType": "Car/Jeep/Van",
+          "singleJourney": "50",
+          "returnJourney": "40"
+        },
+        {
+          "id": 2,
+          "vehicleType": "LCV",
+          "singleJourney": "60",
+          "returnJourney": "50"
+        },
+        {
+          "id": 3,
+          "vehicleType": "Truck/Bus",
+          "singleJourney": "70",
+          "returnJourney": "60"
+        },
+        {
+          "id": 4,
+          "vehicleType": "Heavy vehicle",
+          "singleJourney": "80",
+          "returnJourney": "70"
+        }
+      ]
     }
   ],
   "entries": [
     {
       "id": 1,
-      "TollName": "kadapa",
+      "TollName": "hyderabad",
       "vehicleNumber": "AP04S5555",
       "vehicleType": "LCV",
       "dateTime": "09/18/2022, 24:14:07",
@@ -72,43 +72,11 @@
     },
     {
       "id": 2,
-      "TollName": "kurnool",
-      "vehicleNumber": "AP04S5555",
-      "vehicleType": "Car/Jeep/Van",
-      "dateTime": "09/18/2022, 24:19:14",
-      "tariff": "784"
-    },
-    {
-      "id": 3,
       "TollName": "kadapa",
-      "vehicleNumber": "AP04S5789",
+      "vehicleNumber": "AP04BX7409",
       "vehicleType": "Car/Jeep/Van",
-      "dateTime": "09/18/2022, 22:21:36",
-      "tariff": "55"
-    },
-    {
-      "id": 4,
-      "TollName": "kadapa",
-      "vehicleNumber": "AP04123456",
-      "vehicleType": "Car/Jeep/Van",
-      "dateTime": "09/19/2022, 10:01:30",
-      "tariff": "55"
-    },
-    {
-      "id": 5,
-      "TollName": "bangalore",
-      "vehicleNumber": "AP04123456",
-      "vehicleType": "Car/Jeep/Van",
-      "dateTime": "09/20/2022, 13:22:20",
-      "tariff": "45"
-    },
-    {
-      "id": 6,
-      "TollName": "hyderabda",
-      "vehicleNumber": "AP04QA1234",
-      "vehicleType": "Car/Jeep/Van",
-      "dateTime": "10/14/2022, 10:54:16",
-      "tariff": "45"
+      "dateTime": "04/30/2023, 14:06:03",
+      "tariff": "50"
     }
   ]
 }
